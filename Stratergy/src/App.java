@@ -1,11 +1,22 @@
+import DuckBehaviours.FlyWithWings;
+import DuckBehaviours.FlyWithoutWings;
+import Ducks.Duck;
+import Ducks.MalladDuck;
+import Ducks.RedheadDuck;
+
 public class App {
     public static void main(String[] args) throws Exception {
-        Duck mallDuck = new MalladDuck();
+        Duck mallDuck = new MalladDuck(new FlyWithWings());
         mallDuck.display();
-        mallDuck.quack();
+        mallDuck.flyit();
 
-        Duck redHeadDuck = new RedheadDuck();
+        Duck redHeadDuck = new RedheadDuck(new FlyWithoutWings());
         redHeadDuck.display();
-        redHeadDuck.quack();
+        redHeadDuck.flyit();
+
+        // changed dynamically
+        
+        redHeadDuck.setFlyBehaviour(new FlyWithWings());
+        redHeadDuck.flyit();
     }
 }

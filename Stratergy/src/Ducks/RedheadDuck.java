@@ -1,6 +1,10 @@
+package Ducks;
+
+import DuckBehaviours.Fly;
+
 public class RedheadDuck extends Duck {
-    RedheadDuck(){
-        super("Redhead");
+    public RedheadDuck(Fly flyBehaviour){
+        super(flyBehaviour);
     }
     @Override
     public void display() {

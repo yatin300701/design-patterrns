@@ -1,9 +1,10 @@
-/**
- * MalladDuck
- */
+package Ducks;
+
+import DuckBehaviours.Fly;
+
 public class MalladDuck extends Duck{
-    MalladDuck(){
-        super("MalladDuck");
+    public MalladDuck(Fly flyBehaviour){
+        super(flyBehaviour);
     }
     @Override
     public void display() {
